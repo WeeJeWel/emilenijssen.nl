@@ -1,16 +1,19 @@
-
 <!doctype html>
 <!--
 Hello, curious person.
+
+Test from GitHub Codespaces!
 -->
 <html>
-	<head>
-		<title>Emile Nijssen</title>
-		<meta viewport="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="img/favicon.png" />
-		<link href="https://fonts.googleapis.com/css?family=Nothing You Could Do" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-		<style type="text/css">
+
+<head>
+	<title>Emile Nijssen</title>
+	<meta viewport="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/favicon.png" />
+	<link href="https://fonts.googleapis.com/css?family=Nothing You Could Do" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+		integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<style type="text/css">
 		* {
 			margin: 0;
 			padding: 0;
@@ -29,7 +32,7 @@ Hello, curious person.
 
 			font-family: "Nothing You Could Do", Helvetica, sans-serif;
 			color: white;
-			text-shadow: 0 2px 0px rgba(0,0,0,0.2);
+			text-shadow: 0 2px 0px rgba(0, 0, 0, 0.2);
 
 			background: -webkit-linear-gradient(#FFFFFF 0%, #EEEEEE 100%);
 			background: url(./img/bg.jpg) no-repeat left center;
@@ -37,7 +40,7 @@ Hello, curious person.
 		}
 
 		::selection {
-			background-color: rgba(255,255,255,0.5);
+			background-color: rgba(255, 255, 255, 0.5);
 		}
 
 		.avatar {
@@ -48,7 +51,7 @@ Hello, curious person.
 			background-size: cover;
 			margin-bottom: 3vmin;
 
-			box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 		}
 
 		h1 {
@@ -71,108 +74,121 @@ Hello, curious person.
 			justify-content: space-around;
 			margin-bottom: 5vmin;
 		}
-		.project {
+
+		.project {}
+
+		.project a {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-decoration: none;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: inherit;
 		}
-			.project a {
-				position: relative;
-				display: block;
-				width: 100%;
-				height: 100%;
-				text-decoration: none;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				color: inherit;
-			}
-				.project .icon-wrap {
-					position: relative;
-					z-index: 2;
-					background: white;
-					width: 15vmin;
-					height: 15vmin;
-					border-radius: 3vmin;
-					overflow: hidden;
 
-					transition: all 0.3s;
-				}
-					.project .icon-wrap .icon {
-						display: block;
-						position: absolute;
-						top: 0;
-						left: 0;
-						right: 0;
-						bottom: 0;
-						background-size: contain;
-						background-position: center center;
-						background-repeat: no-repeat;
+		.project .icon-wrap {
+			position: relative;
+			z-index: 2;
+			background: white;
+			width: 15vmin;
+			height: 15vmin;
+			border-radius: 3vmin;
+			overflow: hidden;
 
-						transition: all 0.3s;
-					}
-				.project .name {
-					position: relative;
-					z-index: 1;
-					display: block;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					height: 3vmin;
-					margin-top: -3vmin;
+			transition: all 0.3s;
+		}
 
-					color: #666;
-					font-size: 2.9vmin;
-					font-weight: 400;
-					text-shadow: 0 1px 0px rgba(255,255,255,1);
-					opacity: 0;
+		.project .icon-wrap .icon {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-size: contain;
+			background-position: center center;
+			background-repeat: no-repeat;
 
-					transition: all 0.3s;
-				}
-			.project:hover {
+			transition: all 0.3s;
+		}
 
-			}
-				.project:hover .icon-wrap {
-					box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-					transform: translateY(-2vmin);
-				}
-				.project .icon-wrap,
-				.project:active .icon-wrap {
-					transform: translateY(0px);
-					box-shadow: 0 20px 20px rgba(0,0,0,0.1);
-				}
-					.project:hover .icon-wrap .name {
-						visibility: visible;
-						opacity: 1;
-					}
-				.project:hover .name {
-					transform: translateY(2vh);
-					opacity: 1;
-				}
-				.project .name,
-				.project:active .name {
-					transform: translateY(0vh);
-				}
-			.project.homey .icon {
-				background-image: url(img/homey.png);
-				background-size: 80%;
-				animation: rotate 25s infinite linear;
-			}
-			.project.spotivinyl .icon {
-				background-image: url(img/spotivinyl.png);
-			}
-			.project.luxio .icon {
-				background-color: black;
-				background-image: url(img/luxio.png);
-			}
-			.project.tripbox .icon {
-				background-color: white;
-				background-image: url(img/tripbox.png);
-				background-size: 80%;
-			}
-			.project.leav .icon {
-				background-color: white;
-				background-image: url(img/leav.png);
-				background-size: 80%;
-			}
+		.project .name {
+			position: relative;
+			z-index: 1;
+			display: block;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 3vmin;
+			margin-top: -3vmin;
+
+			color: #666;
+			font-size: 2.9vmin;
+			font-weight: 400;
+			text-shadow: 0 1px 0px rgba(255, 255, 255, 1);
+			opacity: 0;
+
+			transition: all 0.3s;
+		}
+
+		.project:hover {}
+
+		.project:hover .icon-wrap {
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+			transform: translateY(-2vmin);
+		}
+
+		.project .icon-wrap,
+		.project:active .icon-wrap {
+			transform: translateY(0px);
+			box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+		}
+
+		.project:hover .icon-wrap .name {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.project:hover .name {
+			transform: translateY(2vh);
+			opacity: 1;
+		}
+
+		.project .name,
+		.project:active .name {
+			transform: translateY(0vh);
+		}
+
+		.project.homey .icon {
+			background-image: url(img/homey.png);
+			background-size: 80%;
+			animation: rotate 25s infinite linear;
+		}
+
+		.project.spotivinyl .icon {
+			background-image: url(img/spotivinyl.png);
+		}
+
+		.project.luxio .icon {
+			background-color: black;
+			background-image: url(img/luxio.png);
+		}
+
+		.project.tripbox .icon {
+			background-color: white;
+			background-image: url(img/tripbox.png);
+			background-size: 80%;
+		}
+
+		.project.leav .icon {
+			background-color: white;
+			background-image: url(img/leav.png);
+			background-size: 80%;
+		}
 
 		.grow {
 			flex-grow: 1;
@@ -183,101 +199,108 @@ Hello, curious person.
 			font-weight: 200;
 			cursor: default;
 		}
-			.contact a {
-				font-size: 4vmin;
-				margin: 0 1vmin;
-				text-decoration: none;
 
-				transition: all 0.3s;
-			}
-			.contact a:hover {
-				color: rgba(255,255,255,1);
-			}
-			.contact a,
-			.contact a:active {
-				color: rgba(255,255,255,0.75);
-			}
+		.contact a {
+			font-size: 4vmin;
+			margin: 0 1vmin;
+			text-decoration: none;
+
+			transition: all 0.3s;
+		}
+
+		.contact a:hover {
+			color: rgba(255, 255, 255, 1);
+		}
+
+		.contact a,
+		.contact a:active {
+			color: rgba(255, 255, 255, 0.75);
+		}
 
 		@keyframes rotate {
 			0% {
 				transform: rotate(0deg);
 			}
+
 			100% {
 				transform: rotate(360deg);
 			}
 		}
-		</style>
+	</style>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5181581-6"></script>
-		<script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5181581-6"></script>
+	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
+		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 		gtag('config', 'UA-5181581-6');
-		</script>
+	</script>
 
-	</head>
-	<body>
+</head>
 
-		<div class="grow"></div>
+<body>
 
-		<div class="avatar"></div>
+	<div class="grow"></div>
 
-		<h1>Emile Nijssen</h1>
-		<h2>My Projects</h2>
+	<div class="avatar"></div>
+
+	<h1>Emile Nijssen</h1>
+	<h2>My Projects</h2>
 
 
-		<ul class="projects">
-			<li class="project homey">
-				<a href="https://www.athom.com" target="_blank">
-					<div class="icon-wrap">
-						<div class="icon"></div>
-					</div>
-					<h3 class="name">Homey</h3>
-				</a>
-			</li>
-			<li class="project spotivinyl">
-				<a href="https://spotivinyl.app" target="_blank">
-					<div class="icon-wrap">
-						<div class="icon"></div>
-					</div>
-					<h3 class="name">Spotivinyl</h3>
-				</a>
-			</li>
-			<li class="project luxio">
-				<a href="https://www.luxio.lighting" target="_blank">
-					<div class="icon-wrap">
-						<div class="icon"></div>
-					</div>
-					<h3 class="name">Luxio</h3>
-				</a>
-			</li>
-			<li class="project tripbox">
-				<a href="https://www.t-r-i-p-b-o-x.org" target="_blank">
-					<div class="icon-wrap">
-						<div class="icon"></div>
-					</div>
-					<h3 class="name">T R I P B O X</h3>
-				</a>
-			</li>
-			<li class="project leav">
-				<span>
-					<div class="icon-wrap">
-						<div class="icon"></div>
-					</div>
-					<h3 class="name">leav</h3>
-				</span>
-			</li>
-		</ul>
+	<ul class="projects">
+		<li class="project homey">
+			<a href="https://www.athom.com" target="_blank">
+				<div class="icon-wrap">
+					<div class="icon"></div>
+				</div>
+				<h3 class="name">Homey</h3>
+			</a>
+		</li>
+		<li class="project spotivinyl">
+			<a href="https://spotivinyl.app" target="_blank">
+				<div class="icon-wrap">
+					<div class="icon"></div>
+				</div>
+				<h3 class="name">Spotivinyl</h3>
+			</a>
+		</li>
+		<li class="project luxio">
+			<a href="https://www.luxio.lighting" target="_blank">
+				<div class="icon-wrap">
+					<div class="icon"></div>
+				</div>
+				<h3 class="name">Luxio</h3>
+			</a>
+		</li>
+		<li class="project tripbox">
+			<a href="https://www.t-r-i-p-b-o-x.org" target="_blank">
+				<div class="icon-wrap">
+					<div class="icon"></div>
+				</div>
+				<h3 class="name">T R I P B O X</h3>
+			</a>
+		</li>
+		<li class="project leav">
+			<span>
+				<div class="icon-wrap">
+					<div class="icon"></div>
+				</div>
+				<h3 class="name">leav</h3>
+			</span>
+		</li>
+	</ul>
 
-		<div class="grow"></div>
+	<div class="grow"></div>
 
-		<p class="contact">
-			<a href="mailto:info@emilenijssen.nl"><i class="fas fa-envelope-square"></i></a>
-			<a target="_blank" href="https://www.linkedin.com/in/emilenijssen/"><i class="fab fa-linkedin"></i></a>
-			<a target="_blank" href="https://www.github.com/weejewel/"><i class="fab fa-github"></i></a>
-			<a target="_blank" href="https://www.instagram.com/emilenijssen/" target="_blank"><i class="fab fa-instagram"></i></a>
-		</p>
+	<p class="contact">
+		<a href="mailto:info@emilenijssen.nl"><i class="fas fa-envelope-square"></i></a>
+		<a target="_blank" href="https://www.linkedin.com/in/emilenijssen/"><i class="fab fa-linkedin"></i></a>
+		<a target="_blank" href="https://www.github.com/weejewel/"><i class="fab fa-github"></i></a>
+		<a target="_blank" href="https://www.instagram.com/emilenijssen/" target="_blank"><i
+				class="fab fa-instagram"></i></a>
+	</p>
 
-	</body>
+</body>
+
 </html>
